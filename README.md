@@ -165,7 +165,11 @@
         sudo -c
         ``` 
 
-    * The configuration for which users can run which commands using sudo is defined in the `/etc/sudoers` file. The visudo command is used to edit the sudoers file. The sudo command logs successful authentication and command data to `/var/log/secure`.
+    * The configuration for which users can run which commands using sudo is defined in the `/etc/sudoers` file.
+        ```shell
+        %sudo   ALL=(ALL:ALL) /path/to/allowed/command1,/path/to/allowed/command2
+        ```
+    * The visudo command is used to edit the sudoers file. The sudo command logs successful authentication and command data to `/var/log/secure`.
 
 1. Archive, compress, unpack, and decompress files using tar, star, gzip, and bzip2
 
